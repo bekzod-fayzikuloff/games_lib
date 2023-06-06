@@ -1,0 +1,49 @@
+
+.inner {
+  padding: 10pt;
+}
+
+.game__set {
+  width: 100%;
+  height: 200px;
+}
+
+.category_title {
+  padding-top: 7pt;
+}
+
+.game__set_root {
+  display: flex;
+}
+
+.game__item {
+  width: 230px;
+  border: 1px solid gray;
+  height: 130px;
+  margin-right: 7pt;
+  border-radius: 20px;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.game__item:hover p {
+  visibility: visible;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.game__item p {
+  padding-top: 18%;
+  text-align: center;
+  height: 100%;
+  border-radius: 20px;
+  background: rgba(157, 193, 217, 0.72);
+  color: #1c1313;
+  visibility: hidden;
+  opacity: 0;
+
+  transition: opacity .2s, visibility .2s;
+}

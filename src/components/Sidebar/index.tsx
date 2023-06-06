@@ -1,8 +1,10 @@
 import {AiFillHome} from "react-icons/ai";
 import {BsFillStopwatchFill} from "react-icons/bs";
 import style from "./Sidebar.module.css"
+import {useNavigate} from "react-router-dom";
 
 export const Sidebar = () => {
+  const navigate = useNavigate()
   const items = [
     {
       title: "Home",
@@ -17,7 +19,7 @@ export const Sidebar = () => {
   ]
   return (
     <>{items.map((sideBarItem, id) => (
-      <article className={style.item} key={id}>
+      <article onClick={() => navigate(sideBarItem.link)} className={style.item} key={id}>
         <p>{sideBarItem.icon} {sideBarItem.title}</p>
       </article>
     ))}</>

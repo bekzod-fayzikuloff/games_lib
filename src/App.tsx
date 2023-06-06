@@ -3,6 +3,7 @@ import {useEffect, useState} from "react";
 import {Routes, Route} from "react-router-dom";
 import {MainLayout} from "./layouts/Main";
 import {NotFound} from "./components/NotFound";
+import {HomePage} from "./pages/HomePage";
 
 
 function App() {
@@ -17,7 +18,7 @@ function App() {
     <Routes>
 
       <Route path="/" element={<MainLayout isBurgerOpen={isBurgerOpen} setIsBurgerOpen={setIsBurgerOpen} setSearchTitle={setSearchTitle} />}>
-        <Route index element={<h1>Hello</h1>} />
+        <Route index element={<HomePage />} />
         <Route path="*" element={<NotFound />} />
       </Route>
 
