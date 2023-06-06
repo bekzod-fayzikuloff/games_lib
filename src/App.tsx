@@ -1,8 +1,8 @@
 import './App.module.css'
 import {useEffect, useState} from "react";
-import style from "./App.module.css"
-import {Header} from "./components/Header";
-import {Sidebar} from "./components/Sidebar";
+import {Routes, Route} from "react-router-dom";
+import {MainLayout} from "./layouts/Main";
+import {NotFound} from "./components/NotFound";
 
 
 function App() {
@@ -14,19 +14,14 @@ function App() {
   }, [searchTitle])
 
   return (
-    <>
-      <Header setSearchTitle={setSearchTitle} isBurgerOpen={isBurgerOpen} setIsBurgerOpen={setIsBurgerOpen}/>
-      <main className={style.root}>
-        {isBurgerOpen &&
-        <aside className={style.sidebar}>
-          <Sidebar />
-        </aside>
-        }
-        <div className={style.main__content}>
-          <p>Content</p>
-        </div>
-      </main>
-    </>
+    <Routes>
+
+      <Route path="/" element={<MainLayout isBurgerOpen={isBurgerOpen} setIsBurgerOpen={setIsBurgerOpen} setSearchTitle={setSearchTitle} />}>
+        <Route index element={<h1>Hello</h1>} />
+        <Route path="*" element={<NotFound />} />
+      </Route>
+
+    </Routes>
   )
 }
 
