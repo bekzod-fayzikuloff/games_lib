@@ -1,0 +1,54 @@
+.head__bar {
+  padding: 10pt !important;
+  z-index: 2;
+  background-color: #1F2030 !important;
+}
+
+.search__input {
+  padding: 2pt 10pt;
+  border: 1.7px solid #efeded;
+  border-radius: 11pt;
+}
+
+.search__input input[type="search"] {
+  width: 300px;
+  color: white;
+  background: transparent;
+  margin: 0;
+  padding: 7px 8px;
+  font-size: 14px;
+  border: none;
+  border-radius: inherit;
+}
+
+.search__input input[type="search"]::placeholder {
+  color: #bbb;
+}
+
+.search__input input[type="search"]:focus {
+  outline: none;
+}
+
+.search__input svg {
+  font-weight: bold;
+  fill: white;
+}
+
+.logo {
+  height: 20pt;
+  filter: invert(90%) sepia(12%) saturate(2%) hue-rotate(3deg) brightness(112%) contrast(100%);
+}
+
+.logo:hover {
+  height: 20pt;
+  filter: invert(46%) sepia(89%) saturate(1163%) hue-rotate(348deg) brightness(101%) contrast(89%);
+}
+
+.burger__btn svg:hover {
+  filter: invert(46%) sepia(89%) saturate(1163%) hue-rotate(348deg) brightness(101%) contrast(89%);
+}
+
+.lg_title:hover {
+  filter: invert(56%) sepia(41%) saturate(1256%) hue-rotate(200deg) brightness(96%) contrast(96%);
+  cursor: pointer;
+}

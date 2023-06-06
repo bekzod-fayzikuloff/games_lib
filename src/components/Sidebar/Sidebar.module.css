@@ -1,0 +1,25 @@
+
+
+.item p {
+  padding-top: 4pt;
+  display: flex;
+  align-items: center;
+  transition-duration: 0.2s;
+}
+
+.item svg {
+  margin-left: 14pt;
+  margin-right: 10pt;
+}
+
+.item svg:hover {
+  filter: invert(60%) sepia(49%) saturate(2391%) hue-rotate(212deg) brightness(102%) contrast(102%);
+}
+
+
+.item p:hover {
+  padding-top: 2pt;
+  transition-duration: 0.2s;
+  cursor: pointer;
+  color: #f1ecec;
+}
