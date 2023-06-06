@@ -2,7 +2,10 @@
 
 body {
   overflow-y: scroll;
-
+  min-height: 100vh;
+}
+html {
+  min-height: 100vh;
 }
 * {
   margin: 0;

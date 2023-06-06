@@ -40,7 +40,7 @@ const GameSetItem = (
 export const HomePage = () => {
   const games = [
     {
-      title: "XsOs",
+      title: "Tic-Tac-Toe",
       image: Xs_Os,
       link: "xs-os"
     }

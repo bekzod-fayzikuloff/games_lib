@@ -4,6 +4,7 @@ import {Routes, Route} from "react-router-dom";
 import {MainLayout} from "./layouts/Main";
 import {NotFound} from "./components/NotFound";
 import {HomePage} from "./pages/HomePage";
+import {TicTacToePage} from "./pages/Games/TicTacToePage";
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
 
       <Route path="/" element={<MainLayout isBurgerOpen={isBurgerOpen} setIsBurgerOpen={setIsBurgerOpen} setSearchTitle={setSearchTitle} />}>
         <Route index element={<HomePage />} />
+        <Route path={"/games/xs-os"} element={<TicTacToePage />} />
         <Route path="*" element={<NotFound />} />
       </Route>
 

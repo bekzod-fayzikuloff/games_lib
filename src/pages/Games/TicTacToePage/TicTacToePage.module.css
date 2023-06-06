@@ -1,0 +1,56 @@
+.root {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+.inner {
+  width: 75%;
+  height: 100%;
+}
+
+
+.game__root {
+  margin-top: 10pt;
+  width: 100% ;
+  background-color: #675c5c;
+  height: 600px;
+}
+
+.game__rules {
+  display: flex;
+  justify-content: center;
+}
+
+.rules_container {
+  margin-top: 20pt;
+  position: relative;
+  height: 40%;
+  width: 80%;
+  border-radius: 7pt;
+  background-color: #212233;
+}
+
+.room_form {
+  display: flex;
+  justify-content: center;
+}
+
+.join__form {
+  width: 40%;
+  padding: 20pt 20pt 10pt;
+  border-left: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+  border-right: 1px solid #ffffff;
+  border-bottom-right-radius: 9pt;
+  border-bottom-left-radius: 9pt;
+}
+
+.join__form button {
+  margin-top: 5pt;
+  margin-right: 5pt;
+}
+
+.join__form input {
+  margin-bottom: 6pt;
+}
