@@ -11,10 +11,26 @@
 
 
 .game__root {
-  margin-top: 10pt;
+  border: 2px solid white;
+  margin-top: 19pt;
   width: 100% ;
-  background-color: #675c5c;
   height: 600px;
+}
+
+.game_messages {
+  text-align: center;
+}
+
+.error_msg {
+  color: #ef5555;
+}
+
+.moves_msg {
+  color: #7e7ecc;
+}
+
+.result_msg {
+  color: aqua;
 }
 
 .game__rules {
@@ -53,4 +69,40 @@
 
 .join__form input {
   margin-bottom: 6pt;
+}
+
+:root {
+  --cell-size: 140px;
+  --color: #7e7ecc;
+  --color-set: #4040ec;
+  --l: 10px
+}
+
+.board {
+  height: 80%;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  grid-template-columns: repeat(3, auto);
+}
+
+.cell {
+  width: var(--cell-size);
+  height: var(--cell-size);
+  border: 1px solid #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+
+.x_player {
+  background-color: red;
+}
+
+.y_player {
+  background-color: #0037ff;
 }
