@@ -101,6 +101,8 @@ export const TicTacToePage = () => {
       e.currentTarget.classList.add(`${playerSide === "X" ? style.x_player : style.y_player}`)
       axios.post(`${API_URL}/tic-tac-toe`, {
         roomId, player: playerName, position: cellPos, side: playerSide
+      }).then(() => {
+        console.log("send data")
       })
       setIsYourMove(false)
     }
@@ -179,7 +181,7 @@ export const TicTacToePage = () => {
 
   useEffect(() => {
     checkIsWinner()
-  }, [gameCells])
+  }, [isYourMove])
 
   useEffect(() => {
     const socket = io(`${API_URL}`)
