@@ -113,3 +113,14 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.headline {
+  text-align: center;
+  font-size: 24pt;
+}
+
+.rules {
+  padding-left: 18pt;
+  padding-right: 18pt;
+  font-size: 13pt;
+}

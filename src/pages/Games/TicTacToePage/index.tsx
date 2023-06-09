@@ -6,6 +6,24 @@ import axios from "axios";
 import {getRoomId} from "../../../utils";
 import {API_URL} from "../../../config";
 
+const TicTacToeRules = () => {
+  return (
+    <div className={style.game__rules}>
+      <div className={style.rules_container}>
+        <div className={style.headline}>
+          <p>Tic Tac Toe</p>
+        </div>
+        <div className={style.rules}>
+          <p>
+            In order to start the game you must write your name, then click on create, in order to create a game room, in order to the other party can be added to the game he must also come up with a name, IMPORTANT that they do not match, for full correct work and that participants do not miss each other's moves must start the game after all participants prisoedetsya.
+            Rules related to the choice of sides, the participant who started the game begins as team "X" respectively the participant who joined the game plays as team "O".
+          </p>
+        </div>
+      </div>
+    </div>
+  )
+}
+
 export const TicTacToePage = () => {
   const DEFAULT_STATE = "unfilled"
   const [errorMsg, setErrorMsg] = useState("")
@@ -104,7 +122,7 @@ export const TicTacToePage = () => {
     }
     if (gameIsStart) {
       setErrorMsg("Game is already start you should finish it")
-    } else if (roomId.length < 5) {
+    } else if (roomId.length < 6) {
       setErrorMsg("Invalid room ID, room ID format #1234AB")
     } else if (gameCells.filter(cell => cell.value === DEFAULT_STATE).length !== gameCells.length) {
       setErrorMsg("You should end previous game and restart")
@@ -222,11 +240,7 @@ export const TicTacToePage = () => {
           </div>
         </div>
 
-        <div className={style.game__rules}>
-          <div className={style.rules_container}>
-            <h1>Rules</h1>
-          </div>
-        </div>
+        <TicTacToeRules />
 
       </div>
     </div>
