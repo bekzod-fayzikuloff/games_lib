@@ -19,8 +19,8 @@ function App() {
     <Routes>
 
       <Route path="/" element={<MainLayout isBurgerOpen={isBurgerOpen} setIsBurgerOpen={setIsBurgerOpen} setSearchTitle={setSearchTitle} />}>
-        <Route index element={<HomePage />} />
-        <Route path={"/games/xs-os"} element={<TicTacToePage />} />
+        <Route path="/" element={<HomePage />} />
+        <Route path="/games/xs-os" element={<TicTacToePage />} />
         <Route path="*" element={<NotFound />} />
       </Route>
 
