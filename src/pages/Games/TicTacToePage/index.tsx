@@ -4,6 +4,7 @@ import React, {useCallback, useEffect, useState} from "react";
 import {io} from "socket.io-client"
 import axios from "axios";
 import {getRoomId} from "../../../utils";
+import {API_URL} from "../../../config";
 
 export const TicTacToePage = () => {
   const DEFAULT_STATE = "unfilled"
@@ -80,7 +81,7 @@ export const TicTacToePage = () => {
     if (cellValue === DEFAULT_STATE) {
       changeCellValueByIndex(playerSide, "value", cellPos - 1)
       e.currentTarget.classList.add(`${playerSide === "X" ? style.x_player : style.y_player}`)
-      axios.post("http://127.0.0.1:5000/tic-tac-toe", {
+      axios.post(`${API_URL}/tic-tac-toe`, {
         roomId, player: playerName, position: cellPos, side: playerSide
       })
       setIsYourMove(false)
@@ -163,7 +164,7 @@ export const TicTacToePage = () => {
   }, [gameCells])
 
   useEffect(() => {
-    const socket = io(`http://localhost:5000`)
+    const socket = io(`${API_URL}`)
     setErrorMsg("")
     if (gameIsStart) {
       socket.on(`room_id#${roomId}`, (data) => {
