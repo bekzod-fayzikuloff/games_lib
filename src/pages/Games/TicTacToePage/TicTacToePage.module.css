@@ -88,9 +88,10 @@
 }
 
 .cell {
+  background: #ffffff;
   width: var(--cell-size);
   height: var(--cell-size);
-  border: 1px solid #ffffff;
+  border: 1px solid #000000;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -100,9 +101,15 @@
 
 
 .x_player {
-  background-color: red;
+  background-image: url(https://img.freepik.com/premium-vector/hand-drawn-cross-mark-illustration-marker-wrong-sign-clipart-ink-scribble-checkbox-single-element_645998-2712.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .y_player {
-  background-color: #0037ff;
+  background-image: url(https://coolsen.ru/wp-content/uploads/2022/02/9-20220208_115037.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }

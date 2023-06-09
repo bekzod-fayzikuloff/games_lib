@@ -3,6 +3,7 @@ import {Button, Form} from "react-bootstrap";
 import React, {useCallback, useEffect, useState} from "react";
 import {io} from "socket.io-client"
 import axios from "axios";
+import {getRoomId} from "../../../utils";
 
 export const TicTacToePage = () => {
   const DEFAULT_STATE = "unfilled"
@@ -125,7 +126,7 @@ export const TicTacToePage = () => {
     } else {
       setGameIsStart(true)
       setIsYourMove(true)
-      setRoomId("RandomString")
+      setRoomId(getRoomId())
     }
   }
 
