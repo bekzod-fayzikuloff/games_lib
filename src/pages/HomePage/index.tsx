@@ -1,5 +1,6 @@
 import style from "./HomePage.module.css"
 import Xs_Os from "./../../assets/xs_os.jpg"
+import Knights from "../../assets/knights.png"
 import {useNavigate} from "react-router-dom";
 
 const GameSetItem = (
@@ -43,6 +44,11 @@ export const HomePage = () => {
       title: "Tic-Tac-Toe",
       image: Xs_Os,
       link: "xs-os"
+    },
+    {
+      title: "Unknown Knights",
+      image: Knights,
+      link: "unknown-knights"
     }
   ]
   return (

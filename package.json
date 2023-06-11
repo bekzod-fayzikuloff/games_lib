@@ -11,13 +11,18 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@pixi/react": "^7.1.0",
     "axios": "^1.4.0",
+    "bitecs": "^0.3.38",
     "bootstrap": "^5.3.0",
+    "phaser": "^3.60.0",
+    "pixi.js": "^7.2.4",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.4",
     "react-dom": "^18.2.0",
     "react-icons": "^4.9.0",
     "react-router-dom": "^6.11.2",
+    "regenerator-runtime": "^0.13.11",
     "socker.io": "^0.0.0-alpha-beta",
     "socket.io-client": "^4.6.2"
   },

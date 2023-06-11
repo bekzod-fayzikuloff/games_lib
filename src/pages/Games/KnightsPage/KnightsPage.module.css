@@ -1,0 +1,9 @@
+.root {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+.screen {
+  width: 80% !important;
+}
